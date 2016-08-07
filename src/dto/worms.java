@@ -17,10 +17,9 @@ public class worms {
 	}
 
 
-	public worms(int idworms, String name, String lastname, String mail, String password, String sex, String addres,
+	public worms(String name, String lastname, String mail, String password, String sex, String addres,
 			String phone) {
 		super();
-		this.idworms = idworms;
 		this.name = name;
 		this.lastname = lastname;
 		this.mail = mail;
@@ -109,8 +108,6 @@ public class worms {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	
-	
-	
+
 	
 }

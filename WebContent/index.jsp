@@ -42,7 +42,7 @@
 	<nav id="mainNav"
 		class="navbar navbar-default navbar-custom navbar-fixed-top">
 	<div class="container">
-		<!-- Brand and toggle get grouped for better mobile display -->
+		
 		<div class="navbar-header page-scroll">
 			<button type="button" class="navbar-toggle" data-toggle="collapse"
 				data-target="#bs-example-navbar-collapse-1">
@@ -52,7 +52,6 @@
 			<a class="navbar-brand page-scroll" href="#page-top">BookWorms</a>
 		</div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse"
 			id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
@@ -80,53 +79,48 @@
 	</header>
 
 	<section id="login">
-	<div class="container">
-
-		<div class="stand">
-			<div class="outer-screen">
-				<div class="inner-screen">
-					<div class="form">
-
-
-						<input type="text" class="zocial-dribbble"
-							placeholder="Enter your email" /> <input type="password"
-							placeholder="Password" /> <input type="submit" value="Login" />
-
-					</div>
-				</div>
+	<form class="form-horizontal" id="LogInServlet" action="LogInServlet"
+		method="post">
+		<div class="container">
+			<div class="form">
+				<input type="text" name="email" class="zocial-dribbble"
+					placeholder="Enter your email" /> <input type="password"
+					name="password" placeholder="Password" /> <input type="submit"
+					value="Log In" />
 			</div>
 		</div>
+	</form>
 	</section>
 
 
 	<section id="signup">
-	<div class="container">
+	<form class="formm-horizontal" id="SignUpServlet" action="SignUpServlet"
+		method="post">
+		<div class="container">
 
-		<div class="formSignUp">
-			<input type="text" class="zocial-dribbble" id="name"
-				placeholder="Enter your name" /> <input type="text"
-				class="zocial-dribbble" id="lastnamename"
-				placeholder="Enter your lastname" /> <input type="text"
-				class="zocial-dribbble" placeholder="Enter your email" /> <input
-				type="password" placeholder="Password" /> <input type="text"
-				class="zocial-dribbble" placeholder="Enter your sex" /> <input
-				type="text" class="zocial-dribbble" placeholder="Enter your address" />
-			<input type="text" class="zocial-dribbble"
-				placeholder="Enter your phone number" /> <input type="submit"
-				value="Sign Up" />
+			<div class="formSignUp">
+				<input type="text" class="zocial-dribbble" name="name" placeholder="Enter your name" /> 
+				<input type="text" class="zocial-dribbble" name="lastname" placeholder="Enter your lastname" /> 
+				<input type="text" class="zocial-dribbble" name = "email" placeholder="Enter your email" /> 
+				<input type="password" name = "password" placeholder="Enter your password" /> 
+				<input type="text" class="zocial-dribbble" name= "sex" placeholder="Enter your sex" /> 
+				<input type="text" class="zocial-dribbble" name= "address" placeholder="Enter your address" /> 
+				<input type="text" class="zocial-dribbble" name = "phone"placeholder="Enter your phone number" /> 
+				<input type="submit" value="Sign Up" />
 
 
+			</div>
 		</div>
-	</div>
 
-
+	</form>
 	</section>
+	
 	<section id="about">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
 				<h2 class="section-heading">About</h2>
-				<h3 class="section-subheading text-muted">Bringin book lovers
+				<h3 class="section-subheading text-muted">Bringing book lovers
 					together</h3>
 			</div>
 		</div>
@@ -147,7 +141,7 @@
 							<div class="timeline-body">
 								<p class="text-muted">Our mission is to bring book lovers
 									and bookworms together so they could share their favorite
-									books. Ever read a book that totaly rocked your world? Well now
+									books. Ever read a book that totally rocked your world? Well now
 									you can share it with people who also had their world shaken!
 									Rate and recommend books to other people or just enjoy the
 									company of people like you. We hope that you will find our site
@@ -155,8 +149,12 @@
 							</div>
 						</div>
 					</li>
+					</ul>
 			</div>
 		</div>
+		</div>
+		<br>
+		<br>
 	</section>
 	<section id="contact">
 	<div class="container">

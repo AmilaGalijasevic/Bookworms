@@ -15,9 +15,7 @@
 <title>BookWorms</title>
 
 <!-- Bootstrap Core CSS -->
-<link
-	href="CSS\bootstrap.min.css"
-	rel="stylesheet">
+<link href="CSS\bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom Fonts -->
 <link href="vendor/font-awesome/css/font-awesome.min.css"
@@ -34,11 +32,9 @@
 	rel='stylesheet' type='text/css'>
 
 <!-- Theme CSS -->
-<link href="CSS\agency.min.css"
-	rel="stylesheet">
+<link href="CSS\agency.min.css" rel="stylesheet">
 <!-- Custom CSS -->
-<link href="CSS\style.css"
-	rel="stylesheet">
+<link href="CSS\style.css" rel="stylesheet">
 
 </head>
 
@@ -86,33 +82,55 @@
 	</header>
 
 	<section id="share">
-	<div class="container">
+	<form class="formm-horizontal" id="ShareServlet" action="ShareServlet" method= "post">
+		<div class="container">
+			<div class="form">
+				<input type="text" class="zocial-dribbble" name="book"
+					placeholder="Enter the name of the book" />
 
-		<div class="stand">
-			<div class="outer-screen">
-				<div class="inner-screen">
-					<div class="form">
-
-
-						<input type="text" class="zocial-dribbble"
-							placeholder="Enter the name of the book" />
-
-						<textarea name="text" id="description" cols="34" rows="2"
-							placeholder="Why would you recommend this book?"></textarea>
-						<input type="submit" value="Submit" />
-
-					</div>
-				</div>
+				<textarea type="text" name="description" id="description" cols="34"
+					rows="2" placeholder="Why would you recommend this book?"></textarea>
+				<input type="submit" value="Submit" />
 			</div>
 		</div>
+	</form>
 	</section>
 
 
 	<section id="list">
 
+<div class="container">
+		<h2>Your favorite books</h2>
+		<br>
 
-	<h3>Ovdje ce biti lista najdrazih knjiga</h3>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Name</th>
+					<th>Description</th>
+					<th>Edit</th>
+					<th>Delete</th>
 
+				</tr>
+			</thead>
+			<tbody>
+
+				<c:forEach items="${booklist}" var="worm" varStatus="counter">
+					<tr>
+						<td>${counter.count}</td>
+						<td>${book.name}</td>
+						<td>${book.description}</td>
+						<td><a href="edit?id=${book.idbooks}">Edit book</a></td>
+						<td><a href="delete?id=${book.idbooks}">Delete Contact</a></td>
+						<td></td>
+
+					</tr>
+				</c:forEach>
+
+			</tbody>
+		</table>
+</div>
 
 	</section>
 	<section id="about">
